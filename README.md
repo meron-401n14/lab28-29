@@ -1,5 +1,4 @@
 
-- full-stack
 #### LAB - 29/28
 
 #### Project: To Do
