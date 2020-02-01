@@ -1,5 +1,5 @@
 // replace this url with your personal API url
-export const api = 'http://localhost:4000';
+export const api = 'https://to-donew.herokuapp.com';
 
 export const dateFix = date => {
     let dateObj = new Date(date);

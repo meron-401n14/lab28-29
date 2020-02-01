@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { attemptLogin } from '../store/authReducer';
+import './Styles/index.scss'
 
 function Login(props) {
   let [email, setEmail] = useState('');
@@ -12,32 +13,46 @@ function Login(props) {
   };
 
   return (
-    <div style={{ backgroundColor: "#660c64"}}>
-      <form onSubmit={login}>
-        <h1 style={{ padding: "10px 20px", textAlign: "center", color: "white"}}>Login</h1>
-        <label>
-          Email:{' '}
+    <div>
+      <form onSubmit={login} id="loginForm">
+        <div className="card">
+          <div className="card-body">
+            <div className="card-title text-center">
+
+        <h3>Login</h3>
+            </div>
+            <div className="group-form">
+        <label for="exampleInputEmail"  className="lab">Email address </label>
           <input
             type='text'
-            placeholder="Email Address" 
+            className="form-control"
+            id="exampleInputEmail"
+            placeholder="Enter email" 
             value={email}
             onChange={e => {
               setEmail(e.target.value);
             }}
           />
-        </label>
-        <label>
-          Password:{' '}
+        
+        </div>
+        <div className="form-group">
+        <label for="exampleInputPassword" className="lab">Password</label>
+         
           <input
             type='text'
+            id="exampleInputPassword"
+            className="form-control"
             placeholder="Password"
             value={password}
             onChange={e => {
               setPassword(e.target.value);
             }}
           />
-        </label>
-        <button>Submit</button>
+        
+        </div>
+        <button className="btn btn-primary btn-block">Submit</button>
+        </div>
+        </div>
       </form>
     </div>
   );

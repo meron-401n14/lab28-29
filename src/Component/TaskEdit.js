@@ -11,8 +11,13 @@ function TaskEdit(props) {
   console.log(date);
 
   return (
-    <div>
-      <form
+    <div className="container-fluid">
+          <h3 className="text-center">Edit Task</h3>
+      <hr/>
+      <div className="row">
+
+         
+      <form id='edit-task-form'
         onSubmit={e => {
           e.preventDefault();
           props.edit({
@@ -26,50 +31,55 @@ function TaskEdit(props) {
           props.close();
         }}
       >
-        <h1>Edit Task</h1>
-        <label>
-          Name:{' '}
+       
+      
           <input
+            placeholder="Task Name"
             type='text'
+           
             value={name}
             onChange={e => {
               setName(e.target.value);
             }}
-          ></input>
-        </label>
+          />
+     
 
-        <label>
-          Description:
-                    <input
+          <input
             type='text'
+            placeholder="description"
+          
             value={description}
             onChange={e => {
               setDescription(e.target.value);
             }}
-          ></input>
-        </label>
+          />
+         
+       
 
-        <label>
-          Priority:
-                    <input
+       
+        
+            <input
             type='number'
+            placeholder="Priority"
+            
             value={priority}
             onChange={e => {
               setPriority(e.target.value);
             }}
           />
-        </label>
-
-        <label>
-          Date:
-                    <input
+       
+   
+       
+           <input
+           placeholder="Date"
+          
             type='date'
             value={date}
             onChange={e => {
               setDate(e.target.value);
             }}
           />
-        </label>
+    
 
         <label>
           Is Complete?
@@ -81,9 +91,12 @@ function TaskEdit(props) {
             }}
           />
         </label>
+        </form>
+        </div>
+       
 
-        <button>Save Changes</button>
-        <button
+        <button className="btn-primary">Save Changes</button>
+        <button className="btn-secondary"
           type='button'
           onClick={() => {
             props.close();
@@ -91,8 +104,8 @@ function TaskEdit(props) {
         >
           Cancel
                 </button>
-      </form>
     </div>
+   
   );
 }
 

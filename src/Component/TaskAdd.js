@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Styles/index.scss'
 
 function TaskAdd(props) {
   let [name, setName] = useState('');
@@ -8,7 +9,12 @@ function TaskAdd(props) {
   let [isComplete, setIsComplete] = useState(false);
 
   return (
-    <div>
+    <div className="container">
+      <h1 className="text-center">Add Task</h1>
+      <hr/>
+     
+<div className="row">
+          <div className="col-lg-12">
       <form
         id='add-task-form'
         onSubmit={e => {
@@ -20,63 +26,87 @@ function TaskAdd(props) {
           setIsComplete(false);
         }}
       >
-        <h1>Add Task</h1>
-        <label>
-          Name:{' '}
+        
+       <div className="form-group">
+         <label>Task Name</label>
           <input
+            id="inputName"
+            className="form-control"
             type='text'
             value={name}
+            placeholder="Task Name"
+           
             onChange={e => {
               setName(e.target.value);
             }}
-          />
-        </label>
+          /><br/>
+         
+       </div>
+      
 
-        <label>
-          Description:
-                    <input
+       <div className="form-group">
+       <label>Description</label>
+          <input
+            id="inputDesc"
             type='text'
+            className="form-control"
+            placeholder="Description"
             value={description}
             onChange={e => {
               setDescription(e.target.value);
             }}
-          />
-        </label>
+          /><br/>
+       </div>
 
-        <label>
-          Priority:
-                    <input
+
+      
+
+    
+        <div className="form-group">
+        <label>Priority</label>
+          <input
+            id="inputPri"
+            className="form-control"
+            placeholder="Priority"
             type='number'
             value={priority}
             onChange={e => {
               setPriority(e.target.value);
             }}
-          />
-        </label>
+          /><br/>
+        </div>
+      
 
-        <label>
-          Date:
-                    <input
+        <div className="form-group">
+        <label>Date</label>
+          <input
+          id="inputD"
+          placeholder="Date"
+          className="form-control"
             type='date'
             value={date}
             onChange={e => {
               setDate(e.target.value);
             }}
           />
-        </label>
+        </div>
+      
+
 
         <label>
           Is Complete?
-                    <input
+          <input
+          
             type='checkbox'
             checked={isComplete}
             onChange={e => {
               setIsComplete(e.target.value);
             }}
-          />
+          /><br/>
         </label>
-
-        <button
+        
+        </form>
+        <button className="btn-primary "
           onClick={() => {
             let data = {
               name,
@@ -90,8 +120,12 @@ function TaskAdd(props) {
         >
           Save Changes
                 </button>
-        <button>Clear</button>
-      </form>
+        <button className="btn"
+       
+        >Clear</button>
+     
+      </div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,105 @@
+
+
+@import "bootstrap";
+@import './variables';
+
+html, 
+body{
+    height:100vh
+}
+
+
+
+.login{
+  padding:30px;
+  margin:40 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+ 
+
+body{
+  background-size: cover;
+  background-image: url('/image/todo.jpg');
+  display:flex;
+}
+
+
+#loginForm{
+  width:360px;
+  margin: 0 auto;
+}
+
+.card{
+ background-color: rgba($gray-900, 0.8);
+ border-radius: 0;
+ 
+}
+
+.btn-primary {
+  background-color:#0066ff
+}
+
+.card-title{
+  color: white
+}
+
+#exampleInputEmail{
+  border-width:2px;
+  background-color: $input-color;
+  box-shadow:none ;
+  border-color:rgb(131, 126, 126);
+  color:white
+  
+}
+
+.lab{
+  color:white;
+}
+#exampleInputPassword{
+  background-color: $input-color;
+  border-width:2px;
+  box-shadow:none ;
+  border-color:rgb(131, 126, 126);
+  color:white
+
+}
+
+.container{
+  
+   border-radius: 0.2rem;
+
+}
+
+#inputD{
+  background-color:#ffffcc
+}
+
+#inputDesc{
+  background-color:#ffffcc
+}
+
+#inputPri{
+  background-color:#ffffcc
+}
+
+#inputName{
+  background-color:#ffffcc
+}
+
+
+
+.btn{
+  background-color:#9999ff ;
+}
+
+#add-task-form{
+ 
+  background-color: rgba(rgb(135, 88, 139), 0.7);
+}
+
+#edit-task-form{
+  background-color: rgba(#811673, 0.7);
+}

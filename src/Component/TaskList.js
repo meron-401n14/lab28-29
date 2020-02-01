@@ -9,6 +9,7 @@ import {
   deleteTask,
   addTask,
 } from '../store/taskReducer';
+import { withRouter } from 'react-router-dom';
 
 function TaskList(props) {
   let [edit, setEdit] = useState('');
@@ -50,6 +51,9 @@ function TaskList(props) {
   }
 
   return (
+
+   
+   
     <div>
       {taskObjects} {edit}
       <TaskAdd
